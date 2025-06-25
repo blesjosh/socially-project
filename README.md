@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# 🌐 Socially
 
-First, run the development server:
+**Socially** is a full-stack modern web app built using the latest features of **Next.js App Router**, powered by **PostgreSQL**, **Prisma**, **Clerk**, and **TypeScript**. It’s a social platform with smooth UI, scalable backend, and fast interactions.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🚀 Tech Stack
+
+- **Framework**: Next.js (App Router)
+- **Language**: TypeScript
+- **Database**: PostgreSQL + Prisma ORM
+- **Authentication**: Clerk
+- **Styling**: Tailwind CSS + Shadcn/UI
+- **File Uploads**: UploadThing
+- **Data Handling**: Server Actions, Route Handlers, Optimistic Updates
+- **Rendering**: Server & Client Components
+- **Routing**: Dynamic & Static Routes
+
+---
+
+## ✨ Features
+
+- ✅ App Router with layouts and nested routing
+- 🧩 Special files: `loading.tsx`, `error.tsx`, `not-found.tsx`
+- 🔐 Auth with Clerk (Login, Signup, Protect Routes)
+- 📤 File Uploads via UploadThing
+- ⚡ Optimistic UI updates
+- 📡 API Integration using Next.js Route Handlers
+- 🔄 Smart data fetching, caching & revalidation
+- 🧠 Fully typed with TypeScript
+- 🎨 Clean UI using Tailwind CSS & shadcn/ui
+
+---
+
+## 📁 Project Structure
+
+```
+/socially
+├── app/                  # App Router directory
+│   ├── layout.tsx
+│   ├── page.tsx
+│   ├── loading.tsx
+│   ├── error.tsx
+│   └── not-found.tsx
+├── components/           # Reusable UI components
+├── lib/                  # Utilities and helpers
+├── prisma/               # Prisma schema and client
+├── public/               # Static files
+├── styles/               # Global styles
+├── uploadthing/          # Upload config
+├── middleware.ts         # Clerk middleware
+└── ...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ⚙️ Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Clone the repository
 
-## Learn More
+```bash
+git clone https://github.com/your-username/socially.git
+cd socially
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Install dependencies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm install   # or npm install
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 3. Set up environment variables
 
-## Deploy on Vercel
+Create a `.env` file in the root directory:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```env
+DATABASE_URL=your_postgres_url
+CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+CLERK_SECRET_KEY=your_clerk_secret_key
+UPLOADTHING_SECRET=your_uploadthing_secret
+UPLOADTHING_APP_ID=your_uploadthing_app_id
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 4. Set up Prisma
+
+```bash
+npx prisma generate
+npx prisma migrate dev --name init
+```
+
+### 5. Run the development server
+
+```bash
+pnpm dev   # or npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to see the app.
+
+---
+
+## 🚀 Deployment
+
+Deploy to **Vercel** in 3 steps:
+
+1. Push to GitHub
+2. Import your repo into Vercel
+3. Add your `.env` values in Vercel dashboard
+
+---
+---
+
+## 👨‍💻 Author
+
+Learnt with @burakorkmez
