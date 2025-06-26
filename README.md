@@ -110,6 +110,4 @@ Deploy to **Vercel** in 3 steps:
 ---
 ---
 
-## 👨‍💻 Author
-
 Learnt with [@burakorkmez](https://github.com/burakorkmez)
